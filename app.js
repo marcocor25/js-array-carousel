@@ -34,7 +34,20 @@ console.log(slider);
 sliderWrapper.append(slider);
 slider.classList.add('slider');
 
+// CREO IL TAG IMMAGINE DENTRO IL CONTENITORE "SLIDER"
+const sliderImage = document.createElement('img');
+console.log(sliderImage);
+
+// ASSEGNO L'IMMAGINE AL TAG IMG
+slider.append(sliderImage);
+sliderImage.src = items[1];
+
+
+
+
+
+
 // CREO IL CICLO PER ASSEGNARE LE IMMAGINI DELL'ARREY ALLO "SLIDER"
-for (let i = 0; i < items.length; i++) {
-    console.log(items[i]);
-}
+// for (let i = 0; i < items.length; i++) {
+//     console.log(items[i]);
+// }
