@@ -42,12 +42,22 @@ console.log(sliderImage);
 slider.append(sliderImage);
 sliderImage.src = items[1];
 
+// CREO LA VARIABILE COLLEGATA ALL'ITEM-WRAPPER DELL'HTML
+const itemWrapper = document.querySelector('.ms__item_wrapper');
+console.log(itemWrapper);
 
+// CREO IL CICLO PER GENERARE I DIV DELLE PREVIEW
+for (let i = 0; i < items.length ; i++) {
 
+    const itemBox = document.createElement('div');
+    console.log(itemBox);
 
+    itemWrapper.append(itemBox);
+    itemBox.classList.add('item');
+    
+    const itemImage = document.createElement('img');
+    console.log(itemImage);
 
-
-// CREO IL CICLO PER ASSEGNARE LE IMMAGINI DELL'ARREY ALLO "SLIDER"
-// for (let i = 0; i < items.length; i++) {
-//     console.log(items[i]);
-// }
+    itemBox.append(itemImage);
+    itemImage.src = items[i];
+}
