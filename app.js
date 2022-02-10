@@ -33,3 +33,8 @@ console.log(slider);
 // ASSEGNO LA CLASSE "SLIDER" AL CONTENITORE CREATO IN PRECEDENZA, CON LE MIE REGOLE CSS GIÀ APPLICATE
 sliderWrapper.append(slider);
 slider.classList.add('slider');
+
+// CREO IL CICLO PER ASSEGNARE LE IMMAGINI DELL'ARREY ALLO "SLIDER"
+for (let i = 0; i < items.length; i++) {
+    console.log(items[i]);
+}
