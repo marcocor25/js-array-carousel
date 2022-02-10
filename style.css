@@ -12,7 +12,7 @@ img {
 }
 
 .ms__slider_wrapper, .ms__item_wrapper {
-    height: 300px;
+    min-height: 300px;
 }
 
 .slider {
