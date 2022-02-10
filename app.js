@@ -48,7 +48,7 @@ console.log(itemWrapper);
 
 // CREO IL CICLO PER GENERARE I DIV DELLE PREVIEW
 for (let i = 0; i < items.length ; i++) {
-
+    
     const itemBox = document.createElement('div');
     console.log(itemBox);
 
@@ -60,4 +60,5 @@ for (let i = 0; i < items.length ; i++) {
 
     itemBox.append(itemImage);
     itemImage.src = items[i];
+    
 }
