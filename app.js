@@ -46,9 +46,11 @@ sliderImage.src = items[1];
 const itemWrapper = document.querySelector('.ms__item_wrapper');
 console.log(itemWrapper);
 
+// VARIABILE CURRENT INDEX
+let currentIndex = 0;
+
 // CREO IL CICLO PER GENERARE I DIV DELLE PREVIEW
 for (let i = 0; i < items.length ; i++) {
-    
     const itemBox = document.createElement('div');
     console.log(itemBox);
 
@@ -60,5 +62,35 @@ for (let i = 0; i < items.length ; i++) {
 
     itemBox.append(itemImage);
     itemImage.src = items[i];
-    
+
+    if (currentIndex == i ) {
+        itemBox.classList.add('active_bis');
+    }
 }
+
+// CREO VARIABILE PER RAGGRUPPARE TUTTE LE CLASSI DELLE IMMAGINI
+let allImages = document.querySelectorAll('.item');
+console.log(allImages);
+
+// CREO LA VARIABILE COLLEGATA ALLA CHEVRON-UP DELL'HTML
+const prevButton = document.getElementById('chevron-up');
+console.log(prevButton);
+
+prevButton.addEventListener('click', function() {
+    console.log('It works!');
+})
+
+// CREO LA VARIABILE COLLEGATA ALLA CHEVRON-DOWN DELL'HTML
+const nextButton = document.getElementById('chevron-down');
+console.log(nextButton);
+
+// CREAO AZIONE AZIONE AL CLICK DELLA CHEVRON-DOWN
+nextButton.addEventListener('click', function() {
+    console.log('And it works as well!');
+
+    if (currentIndex < 4 ) {
+        allImages[currentIndex].classList.remove('active_bis');
+        currentIndex++
+        allImages[currentIndex].classList.add('active_bis');
+    }
+})

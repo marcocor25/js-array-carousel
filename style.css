@@ -8,6 +8,13 @@ img {
     user-select: none;
 }
 
+.active {
+}
+
+.item.active_bis {
+    filter: brightness(1);
+}
+
 .ms__fluid {
     height: 100vh;
 }
@@ -17,11 +24,15 @@ img {
     border: 1px solid white;
     border-radius: 10px;
     overflow: hidden;
-    filter: drop-shadow(5px 5px 10px black);
+    filter: drop-shadow(10px 10px 10px black);
 }
 
 .ms__slider_wrapper, .ms__item_wrapper {
     height: 350px;
+}
+
+.ms__slider_wrapper {
+    border-right: 1px solid white;
 }
 
 .ms__item_wrapper {
@@ -34,6 +45,7 @@ img {
 
 .item {
     height: 20%;
+    filter: brightness(0.5);
 }
 
 .button_wrapper {
@@ -42,15 +54,17 @@ img {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
-.button_wrapper a {
+.button_wrapper i {
+    cursor: pointer;
     opacity: 0.6;
     color: white;
     transition: 200ms linear;
 }
 
-.button_wrapper a:hover {
+.button_wrapper i:hover {
     opacity: 1;
     transform: scale(1.1);
 }
